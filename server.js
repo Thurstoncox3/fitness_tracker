@@ -16,7 +16,8 @@ app.use(logger("dev"));
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  // useCreateIndex: true
+  useCreateIndex: true,
+  useFindAndModify: false
 });
 
 app.use(require('./routes/api'));
