@@ -14,11 +14,11 @@ app.use(express.static("public"));
 
 app.use(logger("dev"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
+  // useUnifiedTopology: true,
   // useCreateIndex: true,
-  useFindAndModify: false
+  // useFindAndModify: false
 });
 
 app.use(require('./routes/api'));
